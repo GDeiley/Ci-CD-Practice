@@ -1,4 +1,4 @@
-const { add, subtract, multiply } = require('./index');
+const { add, subtract, multiply, divide } = require('./index');
 
 test('adds numbers correctly', () => {
     expect(add(2, 3)).toBe(5);
@@ -11,4 +11,8 @@ test('subtracts numbers correctly', () => {
 test('multiplies numbers correctly', () => {
     expect(multiply(2, 3)).toBe(6);
 });
+
+test('divideds numbers correctly', () => {
+    expect(divide(6, 3)).toBe(2);
+})
 
