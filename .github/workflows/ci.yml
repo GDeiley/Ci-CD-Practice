@@ -20,14 +20,18 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: "20"
+                  cache: "npm"
 
             - name: Install dependencies
               run: npm install
 
-            - name: Run tests
-              run: npm test
+            - name: Lint code
+              run: npm run lint
+              
+            - name: Run tests with coverage
+              run: npm run test:coverage
 
             - name: Build project
-              run: echo "Building the project..." # Replace with actual build command
+              run: npm run build
 
 
